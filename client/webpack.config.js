@@ -20,26 +20,24 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'J.A.T.E'
       }),
-     
-      // Injects our custom service worker
+
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
 
-      // Creates a manifest.json file.
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
-        short_name: 'Jate',
-        description: 'Edits text!',
+        short_name: 'J.A.T.E',
+        description: 'Takes notes with JS',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -59,7 +57,6 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
           use: {
             loader: 'babel-loader',
             options: {
