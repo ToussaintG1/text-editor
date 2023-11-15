@@ -2,6 +2,7 @@
 
 ## Link to app
 
+https://toussaint-text-editor-22e8bcad9786.herokuapp.com
 
 
 ## Purpose
